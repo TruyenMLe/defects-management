@@ -1,0 +1,123 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    overflow-y: hidden;
+}
+
+.display-block {
+    display: block;
+}
+
+.padding-half {
+    padding: 5px;
+}
+.padding-top {
+    padding-top: 10px;
+}
+.padding-bottom {
+    padding-bottom: 10px;
+}
+.padding-right {
+    padding-right: 10px;
+}
+
+.float-left {
+    float: left;
+}
+.float-right {
+    float: right;
+}
+
+.navbar-brand {
+    padding: 8px;
+}
+.navbar-default {
+    border: none;
+    border-radius: 0px;
+    border-bottom: 4px solid #0096D6;
+    background-color: #ffffff;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.main-tab a {
+    display: inline-block !important;
+    padding: 0px !important;
+}
+.main-tab h3 {
+    margin: 12px 0 12px 12px;
+    color: #666666;
+}
+
+.defect-tab>a{
+    padding: 0px !important;
+}
+.defect-tab h4 {
+    margin: 12px 12px 12px 6px;
+    line-height: 26px;
+    color: #999999;
+}
+
+.sub-tab a {
+    padding: 5px !important;
+    float: right;
+}
+
+#home-bar {
+    padding: 5px;
+    border-bottom: 2px solid #286090;
+}
+
+.label-rct-primary {
+    display: inline-block;
+    margin-top: 2px;
+    border-radius: 0px;
+    padding: 7px;
+    background-color: #0096D6;
+}
+.label-rct-otl-primary {
+    display: inline-block;
+    margin-top: 2px;
+    border-radius: 0px;
+    border: 1px solid #0096D6;
+    padding: 7px;
+    background-color: #ffffff;
+    color: #0096D6;
+}
+
+.btn-rct-primary {
+    border-radius: 0px;
+    background-color: #337ab7;
+    color: #ffffff;
+    padding: 4px !important;
+    border: none;
+}
+
+.action-nav li {
+    padding: 10px;
+    float: left;
+}
+.action-nav li {
+    color: #777777;
+    margin-right: 15px;
+}
+
+.table-hdr-default {
+    background-color: #666666;
+    font-weight: lighter;
+    font-size: 13px;
+    color: #ffffff;
+}
+.table-hdr-default th {
+    border-bottom: none !important;
+}
+.table-bto-default {
+    font-size: 13px;
+}
+.table-bto-default td {
+    border-top: none !important;
+    border-bottom: 1px solid #dddddd;
+}
+
+.a-primary {
+    color: #337ab7;
+}

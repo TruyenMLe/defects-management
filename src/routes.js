@@ -11,5 +11,9 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
     .state('app', {
       url: '/',
       component: 'app'
+    })
+    .state('defect-list', {
+      url: '/defect-list',
+      component: 'defectList'
     });
 }
