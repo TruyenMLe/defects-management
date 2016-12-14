@@ -1,0 +1,57 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+            <a class="navbar-brand" href="#">
+                <img src="../logo.png" alt="HP Logo" />
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="main-tab">
+                    <a href="#">
+                        <h3>Quality Center <span>|</h1> <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="dropdown defect-tab">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" ng-click="$ctrl.openDefectList()">
+                        <h4>Defects <span class="caret" aria-hidden="true"></span></h4>
+                        </span>
+                    </a>
+                    <ul class="dropdown-menu" ng-class="{ 'display-block': $ctrl.active }">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Requirements</a></li>
+                        <li><a href="#">Defects</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Project: DEFAULT/Ascent</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Truyen Le</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span></a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span></a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="nav sub-tab">
+                <li><a href="#"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>Define view</a></li>
+                <li><a>|</a></li>
+                <li><a href="#">Workspace</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,203 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="panel panel-ttl-primary">
+                <div class="panel-heading">
+                    <h4 class="panel-title">Add Defect</h4>
+                </div>
+                <div class="attach-clip">
+                    <div class="attach-clip-lnk">
+                        <span class="glyphicon glyphicon-paperclip padding-right" aria-hidden="true"></span>Attach
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <form name="newDefectFrm">
+                        <div class="form-group row">
+                            <div class="col-md-2">
+                                <span class="red-dot"></span>
+                                <label for="frm-summary">Summary:</label>
+                            </div>
+                            <div class="col-md-10">
+                                <input type="text" name="frm-summary" id="frm-summary" class="width-100-pct" />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <span class="white-dot"></span>
+                                        <label for="frm-defectNum">Defect #:</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="text" name="frm-defectNum" id="frm-defectNum" class="input-dsb" disabled />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <span class="red-dot"></span>
+                                        <label for="frm-status">Status:</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="text" name="frm-status" id="frm-status" ng-model="$ctrl.status" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <span class="red-dot"></span>
+                                        <label for="frm-assignedTo">Assigned To:</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="text" name="frm-assignedTo" id="frm-assignedTo" value="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <span class="red-dot"></span>
+                                        <label for="frm-reportedBy">Reported By:</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="text" name="frm-reportedBy" id="frm-reportedBy" ng-model="$ctrl.reportedBy" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <span class="red-dot"></span>
+                                        <label for="frm-dateReported">Date Reported:</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="text" name="frm-dateReported" id="frm-dateReported" ng-model="$ctrl.dateReported" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <span class="red-dot"></span>
+                                        <label for="frm-priority">Priority:</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="text" name="frm-priority" id="frm-priority" value="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <span class="red-dot"></span>
+                                        <label for="frm-severity">Severity:</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="text" name="frm-severity" id="frm-severity" value="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <span class="white-dot"></span>
+                                        <label for="frm-description">Description:</label>
+                                    </div>
+                                    <div class="col-md-10">
+                                        <textarea rows="2" class="width-100-pct" name="frm-description" id="frm-description"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <span class="red-dot"></span>
+                                        <label for="frm-severity">Business Process:</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="text" name="frm-severity" id="frm-severity" value="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <span class="red-dot"></span>
+                                        <label for="frm-severity">Change Identifier:</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="text" name="frm-severity" id="frm-severity" value="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <span class="red-dot"></span>
+                                        <label for="frm-severity">Change Type:</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="text" name="frm-severity" id="frm-severity" value="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <span class="red-dot"></span>
+                                        <label for="frm-severity">Environment:</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="text" name="frm-severity" id="frm-severity" value="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <span class="red-dot"></span>
+                                        <label for="frm-severity">Issue Type:</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="text" name="frm-severity" id="frm-severity" value="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <span class="red-dot"></span>
+                                        <label for="frm-severity">Project Manager:</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="text" name="frm-severity" id="frm-severity" value="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-12">
+                                <div class="float-right">
+                                    <button type="button" class="btn btn-rct-primary" ng-click="$ctrl.save()">Save</button>
+                                    <button type="button" class="btn btn-rct-otl-primary" ng-click="$ctrl.goToDefectList()">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
