@@ -7,7 +7,7 @@ angular
             this.status = 'New';
             this.reportedBy = 'Truyen Le (trle)';
             this.goToDefectList = function () {
-                $state.go('defect-list');
+                $state.go('home.defect-list');
             };
             this.save = function () {
                 this.goToDefectList();

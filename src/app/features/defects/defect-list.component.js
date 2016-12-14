@@ -7,7 +7,7 @@ angular
                 this.active = !this.active;
             };
             this.goToAddNewDefect = function () {
-                $state.go('new-defect');
+                $state.go('home.new-defect');
             };
         }
     });

@@ -5,19 +5,23 @@ angular
 /** @ngInject */
 function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
     $locationProvider.html5Mode(true).hashPrefix('!');
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/login');
 
     $stateProvider
-        .state('app', {
-            url: '/',
-            component: 'app'
+        .state('login', {
+            url: '/login',
+            component: 'login'
         })
-        .state('defect-list', {
+        .state('home.defect-list', {
             url: '/defects/list',
             component: 'defectList'
         })
-        .state('new-defect', {
+        .state('home.new-defect', {
             url: '/defects/new',
             component: 'newDefect'
+        })
+        .state('home', {
+            url: '/home',
+            templateUrl: 'app/features/home/home.component.html'
         });
 }
