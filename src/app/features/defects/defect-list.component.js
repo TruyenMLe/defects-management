@@ -16,6 +16,8 @@
         vm.goToAddNewDefect = goToAddNewDefect;
         vm.setSearchField = setSearchField;
         vm.openAddFilterModal = openAddFilterModal;
+        vm.removeAllFilters = removeAllFilters;
+        vm.removeFilter = removeFilter;
         vm.removeSelectedSearchValue = removeSelectedSearchValue;
         vm.saveNewFilter = saveNewFilter;
         vm.setSearchValue = setSearchValue;
@@ -120,6 +122,16 @@
                 .catch(function () {
                     $log.error('Error saving new filter');
                 });
+        }
+
+        function removeFilter(filter, value) {
+            filter.values = filter.values.filter(function (data) {
+                return data.name !== value.name;
+            });
+        }
+
+        function removeAllFilters() {
+            vm.defectFilters = [];
         }
     }
 })();

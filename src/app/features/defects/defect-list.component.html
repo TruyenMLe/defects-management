@@ -4,13 +4,13 @@
             <div class="label label-rct-primary" ng-repeat="filter in vm.defectFilters">
                 <span class="label-nme">{{filter.label}}:</span>
                 <span class="label-ctn" ng-repeat="value in filter.values">
-                    {{value.name}} <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+                    {{value.name}} <span class="glyphicon glyphicon-remove-circle" ng-click="vm.removeFilter(filter, value)" aria-hidden="true"></span>
                 </span>
             </div>
             <div class="label label-rct-otl-primary" data-toggle="modal" data-target="#addFilterModal" ng-click="vm.openAddFilterModal()">
                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add Filter
             </div>
-            <div class="label label-rct-otl-primary"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Clear Filter</div>
+            <div class="label label-rct-otl-primary" ng-click="vm.removeAllFilters()"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Clear Filter</div>
         </div>
     </div>
     <div class="row">
