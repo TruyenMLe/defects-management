@@ -1,21 +1,27 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
-            <div class="label label-rct-primary">Assigned To: Truyen Le | <span class="glyphicon glyphicon-remove" aria-hidden="true"></span></div>
-            <div class="label label-rct-primary">Status: (Fixed, In Progress, New, Not Ready) | <span class="glyphicon glyphicon-remove" aria-hidden="true"></span></div>
-            <div class="label label-rct-otl-primary"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add Filter</div>
+            <div class="label label-rct-primary" ng-repeat="filter in vm.defectFilters">
+                <span class="label-nme">{{filter.label}}:</span>
+                <span class="label-ctn" ng-repeat="value in filter.values">
+                    {{value.name}} <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+                </span>
+            </div>
+            <div class="label label-rct-otl-primary" data-toggle="modal" data-target="#addFilterModal" ng-click="vm.openAddFilterModal()">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add Filter
+            </div>
             <div class="label label-rct-otl-primary"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Clear Filter</div>
         </div>
     </div>
     <div class="row">
         <div class="col-md-12">
             <ul class="nav action-nav">
-                <li ng-click="$ctrl.goToAddNewDefect()"><span class="glyphicon glyphicon-plus padding-right" aria-hidden="true"></span><span class="hidden-xs">Add Defect</span></li>
+                <li ng-click="vm.goToAddNewDefect()"><span class="glyphicon glyphicon-plus padding-right" aria-hidden="true"></span><span class="hidden-xs">Add Defect</span></li>
+                <li><span class="glyphicon glyphicon-copy padding-right" aria-hidden="true"></span><span class="hidden-xs">Copy</span></li>
                 <li><span class="glyphicon glyphicon-th-list padding-right" aria-hidden="true"></span><span class="hidden-xs">Choose column</span></li>
                 <li><span class="glyphicon glyphicon-share-alt padding-right" aria-hidden="true"></span><span class="hidden-xs">Go to Defect</span></li>
                 <li><span class="glyphicon glyphicon-refresh padding-right" aria-hidden="true"></span><span class="hidden-xs">Refresh</span></li>
                 <li><span class="glyphicon glyphicon-export padding-right" aria-hidden="true"></span><span class="hidden-xs">Export</span></li>
-                <li><span class="glyphicon glyphicon-scissors padding-right" aria-hidden="true"></span><span class="hidden-xs">Split Pane</span></li>
             </ul>
         </div>
     </div>
@@ -50,6 +56,52 @@
                         </tr>
                     </tbody>
                 </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade modal-rtc" id="addFilterModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Add filter</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="text" class="width-100-pct" name="searchFieldQry" id="searchFieldQry" ng-model="vm.searchFieldQry.$" />
+                    </div>
+                    <div class=" col-md-6" ng-show="vm.selectedSearchField">
+                        <input type="text" class="width-100-pct" name="searchValueQry" id="searchValueQry" ng-model="vm.searchValueQry.$" />
+                        <ul class="autocomplete-lst" ng-class="{ 'display-block': vm.searchValueQry.$ && vm.searchValues.length}">
+                            <li ng-repeat="searchValue in vm.searchValues | filter: vm.searchValueQry" ng-click="vm.setSearchValue(searchValue)">{{searchValue.name}}</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="list-rct-group margin-top">
+                            <ul class="list-group">
+                                <li class="list-group-item" ng-repeat="searchField in vm.searchFields | filter:vm.searchFieldQry" ng-class="{active: vm.selectedSearchField === searchField.label, inactive: vm.selectedSearchField && vm.selectedSearchField !== searchField.label}" ng-click="vm.setSearchField(searchField)">{{searchField.label}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6" ng-show="vm.selectedSearchValues.length">
+                        <div class="list-slt-group margin-top">
+                            <ul class="list-group">
+                                <li class="list-group-item" ng-repeat="selectedSearchValue in vm.selectedSearchValues">
+                                    {{selectedSearchValue.name}} <span class="glyphicon glyphicon-remove-circle" aria-hidden="true" ng-click="vm.removeSelectedSearchValue(selectedSearchValue)"></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-rct-primary" data-dismiss="modal" ng-click="vm.saveNewFilter()">Save</button>
+                <button type="button" class="btn btn-rct-otl-primary" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>

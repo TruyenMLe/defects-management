@@ -24,11 +24,11 @@
             <div class="form-group row">
                 <div class="col-md-10">
                     <div class="float-right">
-                        <button type="button" class="btn btn-rct-primary" ng-click="$ctrl.authenticate()">Authenticate</button>
+                        <button type="button" class="btn btn-rct-primary" ng-click="vm.authenticate()">Authenticate</button>
                     </div>
                 </div>
             </div>
-            <div class="form-group row margin-top-50" ng-if="$ctrl.authenticated">
+            <div class="form-group row margin-top-50" ng-if="vm.authenticated">
                 <div class="col-md-2 col-md-offset-3">
                     <label for="frm-domain">Domain:</label>
                 </div>
@@ -36,7 +36,7 @@
                     <input type="text" name="frm-domain" id="frm-domain" class="width-100-pct" />
                 </div>
             </div>
-            <div class="form-group row" ng-if="$ctrl.authenticated">
+            <div class="form-group row" ng-if="vm.authenticated">
                 <div class="col-md-2 col-md-offset-3">
                     <label for="frm-project">Project:</label>
                 </div>
@@ -44,10 +44,10 @@
                     <input type="password" name="frm-project" id="frm-project" class="width-100-pct" />
                 </div>
             </div>
-            <div class="form-group row" ng-if="$ctrl.authenticated">
+            <div class="form-group row" ng-if="vm.authenticated">
                 <div class="col-md-10">
                     <div class="float-right">
-                        <button type="button" class="btn btn-rct-primary" ng-click="$ctrl.login()">Login</button>
+                        <button type="button" class="btn btn-rct-primary" ng-click="vm.login()">Login</button>
                     </div>
                 </div>
             </div>

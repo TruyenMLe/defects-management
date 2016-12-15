@@ -17,40 +17,40 @@ exports.ngModule = 'app';
  *  The main paths of your project handle these with care
  */
 exports.paths = {
-  src: 'src',
-  dist: 'dist',
-  tmp: '.tmp',
-  e2e: 'e2e',
-  tasks: 'gulp_tasks'
+    src: 'src',
+    dist: 'dist',
+    tmp: '.tmp',
+    e2e: 'e2e',
+    tasks: 'gulp_tasks'
 };
 
 /**
-* used on gulp dist
-*/
+ * used on gulp dist
+ */
 exports.htmlmin = {
-  ignoreCustomFragments: [/{{.*?}}/]
+    ignoreCustomFragments: [/{{.*?}}/]
 };
 
 exports.path = {};
 for (const pathName in exports.paths) {
-  if (exports.paths.hasOwnProperty(pathName)) {
-    exports.path[pathName] = function pathJoin() {
-      const pathValue = exports.paths[pathName];
-      const funcArgs = Array.prototype.slice.call(arguments);
-      const joinArgs = [pathValue].concat(funcArgs);
-      return path.join.apply(this, joinArgs);
-    };
-  }
+    if (exports.paths.hasOwnProperty(pathName)) {
+        exports.path[pathName] = function pathJoin() {
+            const pathValue = exports.paths[pathName];
+            const funcArgs = Array.prototype.slice.call(arguments);
+            const joinArgs = [pathValue].concat(funcArgs);
+            return path.join.apply(this, joinArgs);
+        };
+    }
 }
 
 /**
  *  Common implementation for an error handler of a Gulp plugin
  */
 exports.errorHandler = function (title) {
-  return function (err) {
-    gutil.log(gutil.colors.red(`[${title}]`), err.toString());
-    this.emit('end');
-  };
+    return function (err) {
+        gutil.log(gutil.colors.red(`[${title}]`), err.toString());
+        this.emit('end');
+    };
 };
 /**
  *  Wiredep is the lib which inject bower dependencies in your project
@@ -58,6 +58,6 @@ exports.errorHandler = function (title) {
  *  to inject css preprocessor deps and js files in karma
  */
 exports.wiredep = {
-  exclude: [/jquery/, /bootstrap.js/],
-  directory: 'bower_components'
+    exclude: [],
+    directory: 'bower_components'
 };

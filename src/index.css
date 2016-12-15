@@ -4,7 +4,7 @@ body {
 }
 
 .display-block {
-    display: block;
+    display: block !important;
 }
 
 .display-iln-block {
@@ -94,6 +94,7 @@ body {
     padding: 7px;
     background-color: #ffffff;
     color: #0096D6;
+    cursor: pointer;
 }
 
 .btn-rct-primary {
@@ -267,4 +268,89 @@ footer {
 
 .margin-top-50 {
     margin-top: 50px;
+}
+
+.margin-top {
+    margin-top: 10px;
+}
+
+.margin-top-half {
+    margin-top: 5px;
+}
+
+.label-nme {
+    color: #000000;
+}
+
+.label-ctn span {
+    cursor: pointer;
+}
+
+.modal-rtc .modal-content {
+    border-radius: 0px;
+}
+
+.modal-rtc input {
+    border: 1px solid rgb(238, 238, 238);
+    line-height: 24px;
+    width: 100%;
+    outline-width: 2px;
+}
+
+.list-rct-group,
+.list-slt-group {
+    border: 1px solid rgb(238, 238, 238);
+    height: 250px;
+    overflow: auto;
+}
+
+.list-rct-group li,
+.list-slt-group li {
+    border-radius: 0px !important;
+    padding: 5px 15px;
+    border: none;
+}
+
+.list-rct-group li:hover,
+.list-rct-group li.active {
+    background-color: #0096D6;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.list-rct-group li.inactive:hover {
+    background-color: #ffffff;
+}
+
+.list-rct-group li.inactive {
+    color: #dddddd;
+    pointer-events: none;
+}
+
+.list-slt-group li {
+    color: #0096D6;
+}
+
+.list-slt-group li span {
+    cursor: pointer;
+}
+
+.autocomplete-lst {
+    z-index: 1;
+    position: absolute;
+    background: #ffffff;
+    list-style: none;
+    display: none;
+    padding: 0px;
+    width: 100%;
+    border: 1px solid #0096D6;
+}
+
+.autocomplete-lst li {
+    padding: 5px 15px;
+}
+
+.autocomplete-lst li:hover {
+    background-color: #0096D6;
+    color: #ffffff;
 }
