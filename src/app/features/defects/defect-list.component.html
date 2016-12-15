@@ -1,9 +1,9 @@
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-md-12">
+    <div class="row margin-top">
+        <div class="col-md-9">
             <div class="label label-rct-primary" ng-repeat="filter in vm.defectFilters">
                 <span class="label-nme">{{filter.label}}:</span>
-                <span class="label-ctn" ng-repeat="value in filter.values">
+                <span class="label-ctn" ng-repeat="value in filter.values" title="Remove">
                     {{value.name}} <span class="glyphicon glyphicon-remove-circle" ng-click="vm.removeFilter(filter, value)" aria-hidden="true"></span>
                 </span>
             </div>
@@ -12,16 +12,13 @@
             </div>
             <div class="label label-rct-otl-primary" ng-click="vm.removeAllFilters()"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Clear Filter</div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <ul class="nav action-nav">
-                <li ng-click="vm.goToAddNewDefect()"><span class="glyphicon glyphicon-plus padding-right" aria-hidden="true"></span><span class="hidden-xs">Add Defect</span></li>
-                <li><span class="glyphicon glyphicon-copy padding-right" aria-hidden="true"></span><span class="hidden-xs">Copy</span></li>
-                <li><span class="glyphicon glyphicon-th-list padding-right" aria-hidden="true"></span><span class="hidden-xs">Choose column</span></li>
-                <li><span class="glyphicon glyphicon-share-alt padding-right" aria-hidden="true"></span><span class="hidden-xs">Go to Defect</span></li>
-                <li><span class="glyphicon glyphicon-refresh padding-right" aria-hidden="true"></span><span class="hidden-xs">Refresh</span></li>
-                <li><span class="glyphicon glyphicon-export padding-right" aria-hidden="true"></span><span class="hidden-xs">Export</span></li>
+        <div class="col-md-3">
+            <ul class="nav action-nav float-right">
+                <li title="Add Defect" ng-click="vm.goToAddNewDefect()"><span class="glyphicon glyphicon-plus padding-right" aria-hidden="true"></span></li>
+                <li title="Copy"><span class="glyphicon glyphicon-copy padding-right" aria-hidden="true"></li>
+                <li title="Choose column"><span class="glyphicon glyphicon-th-list padding-right" aria-hidden="true"></span></li>
+                <li title="Go to Defect"><span class="glyphicon glyphicon-share-alt padding-right" aria-hidden="true"></span></li>
+                <li title="Refresh"><span class="glyphicon glyphicon-refresh padding-right" aria-hidden="true"></span></li>
             </ul>
         </div>
     </div>
@@ -31,8 +28,7 @@
                 <table class="table table-hover">
                     <thead class="table-hdr-default">
                         <tr>
-                            <th><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></th>
-                            <th>Defect #</th>
+                            <th><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Defect #</th>
                             <th>Summary</th>
                             <th>Description</th>
                             <th>Status</th>
@@ -44,7 +40,6 @@
                     </thead>
                     <tbody class="table-bto-default">
                         <tr>
-                            <td><input type="checkbox" /></td>
                             <td><a href="#" class="a-primary">20275</a></td>
                             <td>Reject PO does not work in mws</td>
                             <td>I click on reject PO button in mws and it doesn't open the reject modal</td>
