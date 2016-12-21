@@ -39,15 +39,15 @@
                         </tr>
                     </thead>
                     <tbody class="table-bto-default">
-                        <tr>
-                            <td><a href="#" class="a-primary">20275</a></td>
-                            <td>Reject PO does not work in mws</td>
-                            <td>I click on reject PO button in mws and it doesn't open the reject modal</td>
-                            <td>Fixed</td>
-                            <td>2-High</td>
-                            <td>2</td>
-                            <td>Truyen Le (trle)</td>
-                            <td>09/01/2016</td>
+                        <tr ng-repeat="defect in vm.defectList">
+                            <td><a href="#" class="a-primary">{{defect.defectNum}}</a></td>
+                            <td>{{defect.summary}}</td>
+                            <td>{{defect.description}}</td>
+                            <td>{{defect.status}}</td>
+                            <td>{{defect.severity}}</td>
+                            <td>{{defect.priority}}</td>
+                            <td>{{defect.assignedTo}}</td>
+                            <td>{{defect.dateReported}}</td>
                         </tr>
                     </tbody>
                 </table>

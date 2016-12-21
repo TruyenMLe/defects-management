@@ -9,17 +9,16 @@
             controllerAs: 'vm'
         });
 
-    function DefectListController($state, $timeout, $document, filterService, $log) {
+    function DefectListController($state, $timeout, $document, filterService, $log, localDataService) {
         var vm = this;
 
-        vm.openDefectList = openDefectList;
         vm.goToAddNewDefect = goToAddNewDefect;
-        vm.setSearchField = setSearchField;
         vm.openAddFilterModal = openAddFilterModal;
         vm.removeAllFilters = removeAllFilters;
         vm.removeFilter = removeFilter;
         vm.removeSelectedSearchValue = removeSelectedSearchValue;
         vm.saveNewFilter = saveNewFilter;
+        vm.setSearchField = setSearchField;
         vm.setSearchValue = setSearchValue;
 
         init();
@@ -27,19 +26,8 @@
         function init() {
             vm.selectedSearchValues = [];
             vm.defectFilters = [];
-            vm.searchFields = [
-                { label: 'Assigned To', values: [{ name: 'Truyen Le' }, { name: 'Alex Lovato' }] },
-                { label: 'Change Identifier', values: [{ name: '1' }, { name: '2' }, { name: '3' }] },
-                { label: 'Date Reported', values: [{ name: '12/01/2016' }, { name: '12/02/2016' }, { name: '12/03/2016' }] },
-                { label: 'Priority', values: [{ name: '1' }, { name: '2' }, { name: '3' }, { name: '4' }, { name: '5' }] },
-                { label: 'Reported By', values: [{ name: 'Truyen Le' }, { name: 'Alex Lovato' }] },
-                { label: 'Severity', values: [{ name: '1' }, { name: '2' }, { name: '3' }, { name: '4' }, { name: '5' }] },
-                { label: 'Summary', values: [{ name: 'Ideas' }, { name: 'Trust' }, { name: 'Technology' }] }
-            ];
-        }
-
-        function openDefectList() {
-            vm.active = !vm.active;
+            vm.searchFields = localDataService.getListOfSearchFields();
+            vm.defectList = localDataService.getListOfDefects();
         }
 
         function goToAddNewDefect() {
