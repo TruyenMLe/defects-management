@@ -6,7 +6,8 @@
             return {
                 getDefectDetails: getDefectDetails,
                 getListOfDefects: getListOfDefects,
-                getListOfSearchFields: getListOfSearchFields
+                getListOfSearchFields: getListOfSearchFields,
+                getListOfUsers: getListOfUsers
             };
         });
 
@@ -107,8 +108,8 @@
             dateReported: '12/15/2016'
         }, {
             defectNum: '10',
-            summary: 'Change styling to adapt elipse ',
-            description: 'Need to come up with ideas on the structure of deleting the defect through process. It can be a delete button or going to closed status',
+            summary: 'Change styling to adapt elipsis ',
+            description: 'Add ellipsis to summary and description to hide long text',
             status: 'New',
             severity: '3',
             priority: '4',
@@ -126,6 +127,14 @@
             { label: 'Reported By', values: [{ name: 'Truyen Le' }, { name: 'Alex Lovato' }] },
             { label: 'Severity', values: [{ name: '1' }, { name: '2' }, { name: '3' }, { name: '4' }, { name: '5' }] },
             { label: 'Summary', values: [{ name: 'Ideas' }, { name: 'Trust' }, { name: 'Technology' }] }
+        ];
+    }
+
+    function getListOfUsers() {
+        return [
+            { id: '10932', firstName: 'Alex', lastName: 'Lovato', fullName: 'Alex Lovato', shortHand: 'alovato' },
+            { id: '10933', firstName: 'Truyen', lastName: 'Le', fullName: 'Truyen Le', shortHand: 'trle' },
+            { id: '10934', firstName: 'Dave', lastName: 'Laursen', fullName: 'Dave Laursen', shortHand: 'dlaursen' }
         ];
     }
 })();

@@ -52,7 +52,10 @@
                                         <label for="frm-assignedTo">Assigned To:</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <input type="text" name="frm-assignedTo" id="frm-assignedTo" value="" />
+                                        <input type="text" name="frm-assignedTo" id="frm-assignedTo" ng-model="vm.assignedTo.$" />
+                                        <ul class="autocomplete-lst" ng-class="{'display-block': vm.assignedTo.$}">
+                                            <li ng-repeat="user in vm.assignedToList | filter:vm.assignedTo.$" ng-click="vm.selectAssignedToUser(user)">{{user.fullName}}</li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
