@@ -5,7 +5,8 @@
         .module('app')
         .component('newDefect', {
             templateUrl: 'app/features/defects/new-defect.component.html',
-            controller: NewDefectController
+            controller: NewDefectController,
+            controllerAs: 'vm'
         });
 
     function NewDefectController($state) {

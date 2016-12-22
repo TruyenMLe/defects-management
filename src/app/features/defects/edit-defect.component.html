@@ -1,17 +1,14 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-            <div class="panel panel-ttl-primary">
-                <div class="panel-heading">
-                    <h4 class="panel-title">Add Defect</h4>
-                </div>
-                <!-- support in next release -->
-                <!--<div class="attach-clip">
-                    <div class="attach-clip-lnk">
-                        <span class="glyphicon glyphicon-paperclip padding-right" aria-hidden="true"></span>Attach
-                    </div>
-                </div>-->
-                <div class="panel-body">
+        <div class="col-md-12 margin-top-15">
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#overview" aria-controls="overview" role="tab" data-toggle="tab">Overview</a></li>
+                <li role="presentation"><a href="#comments" aria-controls="comments" role="tab" data-toggle="tab">Comments</a></li>
+                <!--<li role="presentation"><a href="#attachments" aria-controls="attachments" role="tab" data-toggle="tab">Attachments</a></li>-->
+                <!--<li role="presentation"><a href="#history" aria-controls="history" role="tab" data-toggle="tab">History</a></li>-->
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active panel-ttl-primary" id="overview">
                     <form name="newDefectFrm">
                         <div class="form-group row">
                             <div class="col-md-2">
@@ -19,7 +16,7 @@
                                 <label for="frm-summary">Summary:</label>
                             </div>
                             <div class="col-md-10">
-                                <input type="text" name="frm-summary" id="frm-summary" class="width-100-pct" />
+                                <input type="text" name="frm-summary" id="frm-summary" class="width-100-pct" ng-model="vm.currentDefect.summary" />
                             </div>
                         </div>
                         <div class="form-group row">
@@ -30,7 +27,7 @@
                                         <label for="frm-defectNum">Defect #:</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <input type="text" name="frm-defectNum" id="frm-defectNum" class="input-dsb" disabled />
+                                        <input type="text" name="frm-defectNum" id="frm-defectNum" class="input-dsb" ng-model="vm.currentDefect.defectNum" disabled />
                                     </div>
                                 </div>
                             </div>
@@ -41,7 +38,7 @@
                                         <label for="frm-status">Status:</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <input type="text" name="frm-status" id="frm-status" ng-model="vm.status" />
+                                        <input type="text" name="frm-status" id="frm-status" ng-model="vm.currentDefect.status" />
                                     </div>
                                 </div>
                             </div>
@@ -52,7 +49,7 @@
                                         <label for="frm-assignedTo">Assigned To:</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <input type="text" name="frm-assignedTo" id="frm-assignedTo" value="" />
+                                        <input type="text" name="frm-assignedTo" id="frm-assignedTo" ng-model="vm.currentDefect.assignedTo" />
                                     </div>
                                 </div>
                             </div>
@@ -65,7 +62,7 @@
                                         <label for="frm-reportedBy">Reported By:</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <input type="text" name="frm-reportedBy" id="frm-reportedBy" ng-model="vm.reportedBy" />
+                                        <input type="text" name="frm-reportedBy" id="frm-reportedBy" ng-model="vm.currentDefect.reportedBy" />
                                     </div>
                                 </div>
                             </div>
@@ -76,7 +73,7 @@
                                         <label for="frm-dateReported">Date Reported:</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <input type="text" name="frm-dateReported" id="frm-dateReported" ng-model="vm.dateReported" />
+                                        <input type="text" name="frm-dateReported" id="frm-dateReported" ng-model="vm.currentDefect.dateReported" />
                                     </div>
                                 </div>
                             </div>
@@ -87,7 +84,7 @@
                                         <label for="frm-priority">Priority:</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <input type="text" name="frm-priority" id="frm-priority" value="" />
+                                        <input type="text" name="frm-priority" id="frm-priority" ng-model="vm.currentDefect.priority" />
                                     </div>
                                 </div>
                             </div>
@@ -100,7 +97,7 @@
                                         <label for="frm-severity">Severity:</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <input type="text" name="frm-severity" id="frm-severity" value="" />
+                                        <input type="text" name="frm-severity" id="frm-severity" ng-model="vm.currentDefect.severity" />
                                     </div>
                                 </div>
                             </div>
@@ -112,56 +109,29 @@
                                         <span class="white-dot"></span>
                                         <label for="frm-description">Description:</label>
                                     </div>
-                                    <div class="col-md-10">
-                                        <textarea rows="2" class="width-100-pct" name="frm-description" id="frm-description"></textarea>
+                                    <div class="col-md-12">
+                                        <textarea rows="5" class="width-100-pct" name="frm-description" id="frm-description" ng-model="vm.currentDefect.description"></textarea>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-md-4">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <span class="red-dot"></span>
-                                        <label for="frm-severity">Environment:</label>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <input type="text" name="frm-severity" id="frm-severity" value="" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <span class="red-dot"></span>
-                                        <label for="frm-severity">Issue Type:</label>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <input type="text" name="frm-severity" id="frm-severity" value="" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <span class="red-dot"></span>
-                                        <label for="frm-severity">Project Manager:</label>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <input type="text" name="frm-severity" id="frm-severity" value="" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-md-12">
-                                <div class="float-right">
-                                    <button type="button" class="btn btn-rct-primary" ng-click="vm.save()">Save</button>
-                                    <button type="button" class="btn btn-rct-otl-primary" ng-click="vm.goToDefectList()">Cancel</button>
                                 </div>
                             </div>
                         </div>
                     </form>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="comments">
+                    <div class="label label-rct-otl-primary">
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add Comment
+                    </div>
+                    <div text-angular ng-model="htmlVariable"></div>
+                </div>
+                <!--<div role="tabpanel" class="tab-pane fade" id="attachments">...</div>-->
+                <!--<div role="tabpanel" class="tab-pane fade" id="history"></div>-->
+                <div class="form-group row">
+                    <div class="col-md-12">
+                        <div class="float-right">
+                            <button type="button" class="btn btn-rct-primary" ng-click="vm.save()">Save</button>
+                            <button type="button" class="btn btn-rct-otl-primary" ng-click="vm.goToDefectList()">Cancel</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

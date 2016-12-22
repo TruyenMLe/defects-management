@@ -4,10 +4,24 @@
     angular.module('app')
         .factory('localDataService', function () {
             return {
+                getDefectDetails: getDefectDetails,
                 getListOfDefects: getListOfDefects,
                 getListOfSearchFields: getListOfSearchFields
             };
         });
+
+    function getDefectDetails(selectedDefect) {
+        var defects = getListOfDefects();
+        var match;
+        for (var i = 0; i < defects.length; i++) {
+            if (defects[i].defectNum === selectedDefect) {
+                match = defects[i];
+                break;
+            }
+        }
+
+        return match;
+    }
 
     function getListOfDefects() {
         return [{

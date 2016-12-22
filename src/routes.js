@@ -20,6 +20,10 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
             url: '/defects/new',
             component: 'newDefect'
         })
+        .state('home.edit-defect', {
+            url: '/defects/:id',
+            component: 'editDefect'
+        })
         .state('home', {
             url: '/home',
             templateUrl: 'app/features/home/home.component.html'

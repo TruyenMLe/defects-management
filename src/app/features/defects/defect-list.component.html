@@ -40,9 +40,9 @@
                     </thead>
                     <tbody class="table-bto-default">
                         <tr ng-repeat="defect in vm.defectList">
-                            <td><a href="#" class="a-primary">{{defect.defectNum}}</a></td>
-                            <td>{{defect.summary}}</td>
-                            <td>{{defect.description}}</td>
+                            <td><a href="#" class="a-primary" ng-click="vm.goToDefectDetails(defect.defectNum)">{{defect.defectNum}}</a></td>
+                            <td class="ellipsis" style="max-width: 200px">{{defect.summary}}</td>
+                            <td class="ellipsis" style="max-width: 700px">{{defect.description}}</td>
                             <td>{{defect.status}}</td>
                             <td>{{defect.severity}}</td>
                             <td>{{defect.priority}}</td>

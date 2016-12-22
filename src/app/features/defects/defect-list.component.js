@@ -13,6 +13,7 @@
         var vm = this;
 
         vm.goToAddNewDefect = goToAddNewDefect;
+        vm.goToDefectDetails = goToDefectDetails;
         vm.openAddFilterModal = openAddFilterModal;
         vm.removeAllFilters = removeAllFilters;
         vm.removeFilter = removeFilter;
@@ -32,6 +33,10 @@
 
         function goToAddNewDefect() {
             $state.go('home.new-defect');
+        }
+
+        function goToDefectDetails(defectNum) {
+            $state.go('home.edit-defect', { id: defectNum });
         }
 
         function setSearchField(searchField) {
