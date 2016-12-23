@@ -108,13 +108,103 @@
             dateReported: '12/15/2016'
         }, {
             defectNum: '10',
-            summary: 'Change styling to adapt elipsis ',
+            summary: 'Change styling to adapt elipsis',
             description: 'Add ellipsis to summary and description to hide long text',
             status: 'New',
             severity: '3',
             priority: '4',
             assignedTo: 'Truyen Le',
             dateReported: '12/15/2016'
+        }, {
+            defectNum: '11',
+            summary: 'Unit tests',
+            description: 'Add unit tests for maintaining code base using Karma and Jasmine',
+            status: 'New',
+            severity: '3',
+            priority: '1',
+            assignedTo: 'Truyen Le',
+            dateReported: '12/22/2016'
+        }, {
+            defectNum: '12',
+            summary: 'End to end tests',
+            description: 'Add end to end tests for checking user behavior on design using Protractor',
+            status: 'New',
+            severity: '2',
+            priority: '5',
+            assignedTo: 'Truyen Le',
+            dateReported: '12/22/2016'
+        }, {
+            defectNum: '13',
+            summary: 'Defect history',
+            description: 'List all histories related to defect with modifier in edit mode',
+            status: 'New',
+            severity: '3',
+            priority: '5',
+            assignedTo: 'Truyen Le',
+            dateReported: '12/22/2016'
+        }, {
+            defectNum: '14',
+            summary: 'Pagination',
+            description: 'Add pagination on top and bottom of defect list',
+            status: 'New',
+            severity: '2',
+            priority: '4',
+            assignedTo: 'Truyen Le',
+            dateReported: '12/22/2016'
+        }, {
+            defectNum: '15',
+            summary: 'Sorting',
+            description: 'Add sorting on each label to sort based on each requirements',
+            status: 'New',
+            severity: '1',
+            priority: '5',
+            assignedTo: 'Truyen Le',
+            dateReported: '12/22/2016'
+        }, {
+            defectNum: '16',
+            summary: 'Saving status',
+            description: 'Fix saving feature in edit mode to reflect new changes on list mode',
+            status: 'New',
+            severity: '1',
+            priority: '3',
+            assignedTo: 'Truyen Le',
+            dateReported: '12/22/2016'
+        }, {
+            defectNum: '17',
+            summary: 'Database integration',
+            description: 'Move all data to database using MongoDB instead of local data.',
+            status: 'New',
+            severity: '1',
+            priority: '2',
+            assignedTo: 'Truyen Le',
+            dateReported: '12/22/2016'
+        }, {
+            defectNum: '18',
+            summary: 'Scrolling on defect list',
+            description: 'Need to figure out why scrolling is not shown on list mode.',
+            status: 'New',
+            severity: '1',
+            priority: '5',
+            assignedTo: 'Truyen Le',
+            dateReported: '12/22/2016'
+        }, {
+            defectNum: '19',
+            summary: 'Table Rendering',
+            description: 'Change list mode to use div elems instead of table cells',
+            status: 'New',
+            severity: '3',
+            priority: '5',
+            assignedTo: 'Truyen Le',
+            dateReported: '12/22/2016'
+        }, {
+            defectNum: '20',
+            summary: 'Help Button',
+            description: 'Need to add help button with instruction on how to use the app',
+            status: 'New',
+            severity: '5',
+            priority: '5',
+            assignedTo: 'Truyen Le',
+            dateReported: '12/22/2016'
         }];
     }
 
