@@ -26,7 +26,7 @@
 
         function init() {
             vm.selectedSearchValues = [];
-            vm.defectFilters = [];
+            vm.defectFilters = [{ label: 'Assigned To', values: [{ name: 'Truyen Le' }] }, { label: 'Status', values: [{ name: 'New' }] }];
             vm.searchFields = localDataService.getListOfSearchFields();
             vm.defectList = localDataService.getListOfDefects();
         }

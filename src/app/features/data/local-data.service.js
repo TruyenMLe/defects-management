@@ -126,6 +126,14 @@
             { label: 'Priority', values: [{ name: '1' }, { name: '2' }, { name: '3' }, { name: '4' }, { name: '5' }] },
             { label: 'Reported By', values: [{ name: 'Truyen Le' }, { name: 'Alex Lovato' }] },
             { label: 'Severity', values: [{ name: '1' }, { name: '2' }, { name: '3' }, { name: '4' }, { name: '5' }] },
+            {
+                label: 'Status',
+                values: [
+                    { name: 'Closed' }, { name: 'Fixed' }, { name: 'In Progress' }, { name: 'New' }, { name: 'Open' },
+                    { name: 'Ready for SQA' }, { name: 'Ready for Functional Testing' }, { name: 'Ready for PROD' },
+                    { name: 'Ready for QUAL' }, { name: 'Reopen' }, { name: 'Retest failed' }
+                ]
+            },
             { label: 'Summary', values: [{ name: 'Ideas' }, { name: 'Trust' }, { name: 'Technology' }] }
         ];
     }
