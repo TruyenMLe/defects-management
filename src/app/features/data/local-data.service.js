@@ -213,7 +213,16 @@
             severity: '2',
             priority: '5',
             assignedTo: 'Truyen Le',
-            dateReported: '12/22/2016'
+            dateReported: '12/27/2016'
+        }, {
+            defectNum: '22',
+            summary: 'Add more pictures',
+            description: 'Add more pictures to make the app look colorful',
+            status: 'New',
+            severity: '5',
+            priority: '5',
+            assignedTo: 'Truyen Le',
+            dateReported: '12/27/2016'
         }];
     }
 
