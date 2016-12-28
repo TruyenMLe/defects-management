@@ -205,6 +205,15 @@
             priority: '5',
             assignedTo: 'Truyen Le',
             dateReported: '12/22/2016'
+        }, {
+            defectNum: '21',
+            summary: 'Automate Build Process',
+            description: 'Integrate jenkins with github services to automatically build project when changes is pushed',
+            status: 'New',
+            severity: '2',
+            priority: '5',
+            assignedTo: 'Truyen Le',
+            dateReported: '12/22/2016'
         }];
     }
 
